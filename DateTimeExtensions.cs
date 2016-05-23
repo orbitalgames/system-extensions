@@ -38,7 +38,7 @@ namespace OrbitalGames.SystemExtensions
 		/// <returns>Unix time representation of given DateTime</returns>
 		public static Int64 GetUnixTime(this DateTime instance)
 		{
-			return (Int64)((instance - UNIX_EPOCH).TotalSeconds);
+			return (Int64)((instance.ToUniversalTime() - UNIX_EPOCH).TotalSeconds);
 		}
 
 		/// <summary>
